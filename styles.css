@@ -1,3 +1,166 @@
-body {
-    background-color: aquamarine;
+/*My Website's Color Scheme*/
+:root {
+    --text: #090e02;
+    --background: #f1f1f1;
+    --primary: #5169e5;
+    --secondary: #7ad1eb;
+    --accent: #5169e5;
 }
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--primary);
+}
+
+header {
+    background-color: var(--primary);
+    color: var(--background);
+    padding: 1rem 0;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+nav h1 {
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--background);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--secondary);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: var(--background);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin: 40px 0;
+}
+
+section.three-column {
+    flex: 1;
+    min-width: calc(33.333% - 14px);
+    margin: 0;
+    padding: 20px;
+    background-color: var(--secondary);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section.three-column p {
+    transition: opacity 0.3s ease;
+}
+
+section.three-column:hover p {
+    opacity: 0.7;
+}
+
+section.three-column h2 {
+    transition: transform 0.3s ease;
+}
+
+section.three-column:hover h2 {
+    transform: scale(1.05);
+}
+
+h2 {
+    color: var(--text);
+    margin-bottom: 15px;
+}
+
+footer {
+    background-color: var(--accent);
+    color: var(--background);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.footer-nav {
+    margin-bottom: 1rem;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-nav a {
+    color: var(--background);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+    color: var(--secondary);
+}
+
+@media screen and (max-width: 600px) {
+    /* Navigation changes for mobile */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav h1 {
+        font-size: 1.8rem;
+        text-align: center;
+        word-wrap: break-word;
+    }
+
+    /* Single column section layout for mobile */
+    section.three-column {
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    main {
+        padding: 10px;
+    }
+}
+
