@@ -83,12 +83,19 @@ section.three-column {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-section.three-column p {
-    transition: opacity 0.3s ease;
+/* Style images inside the three-column sections (logos, thumbnails, etc.) */
+section.three-column img {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+    object-fit: contain; /* keep aspect ratio while fitting the box */
 }
 
-section.three-column:hover p {
+section.three-column:hover img {
     opacity: 0.7;
+    transform: translateY(-2px); /* subtle lift on hover */
 }
 
 section.three-column h2 {
