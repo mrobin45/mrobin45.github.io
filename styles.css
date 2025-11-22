@@ -14,6 +14,7 @@
     box-sizing: border-box;
 }
 
+/*Index Page Styles*/
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -90,12 +91,12 @@ section.three-column img {
     height: auto;
     display: block;
     margin: 0 auto 10px;
-    object-fit: contain; /* keep aspect ratio while fitting the box */
+    object-fit: contain; 
 }
 
 section.three-column:hover img {
     opacity: 0.7;
-    transform: translateY(-2px); /* subtle lift on hover */
+    transform: translateY(-2px); 
 }
 
 section.three-column h2 {
@@ -140,6 +141,53 @@ footer {
     color: var(--secondary);
 }
 
+/*Education Page Styles*/
+#educationMain {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#educationMain section {
+    margin: 10px 0;
+}
+
+table {
+    border-collapse: collapse;
+    width: fit-content;  /* size to content, not full width */
+    max-width: 100%; 
+}
+
+table, th, td {
+    border: 1px solid #000; 
+}
+
+th, td {
+    padding: 20px;
+}
+
+#educationTable {
+    border: 2px solid black;
+}
+
+/*Resume Page Styles*/
+#resumeMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#resumeMain section {
+    margin: 10px 0;
+}
+
+#resumeTable {
+    border: 2px solid black;
+    margin: 0 auto;
+}
+
+/*Responsive Design Styles*/
 @media screen and (max-width: 600px) {
     /* Navigation changes for mobile */
     nav ul {
